@@ -1,0 +1,6 @@
+/Users/olgalehkikh/Documents/ItAcademy/Colosseum/Colloseum-Game/Colloseum_Game/bin/Debug/Colloseum_Game.exe
+/Users/olgalehkikh/Documents/ItAcademy/Colosseum/Colloseum-Game/Colloseum_Game/bin/Debug/Colloseum_Game.pdb
+/Users/olgalehkikh/Documents/ItAcademy/Colosseum/Colloseum-Game/Colloseum_Game/obj/Debug/Colloseum_Game.csproj.AssemblyReference.cache
+/Users/olgalehkikh/Documents/ItAcademy/Colosseum/Colloseum-Game/Colloseum_Game/obj/Debug/Colloseum_Game.csproj.CoreCompileInputs.cache
+/Users/olgalehkikh/Documents/ItAcademy/Colosseum/Colloseum-Game/Colloseum_Game/obj/Debug/Colloseum_Game.exe
+/Users/olgalehkikh/Documents/ItAcademy/Colosseum/Colloseum-Game/Colloseum_Game/obj/Debug/Colloseum_Game.pdb
