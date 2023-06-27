@@ -6,6 +6,7 @@ namespace Colloseum_Game
     {
         public static void Main(string[] args)
         {
+
             //Приветствие
             Console.WriteLine("Приветствуем нового героя в Колизее! Как зовут тебя, храбрейший?");
             string userName = Console.ReadLine();
