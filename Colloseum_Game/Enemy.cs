@@ -3,12 +3,21 @@ namespace Colloseum_Game
 {
     public class Enemy 
     {
+
+        public string enemyName;
+        public int enemyHealth;
+
+
         
         public Enemy()
         {
+            Random rnd = new Random();
+            enemyName = nameGenerator();
+            enemyHealth = rnd.Next(5, 11);
+
         }
 
-        public string nameGenerator()
+        public static string nameGenerator()
         {
             var rnd = new Random();
             string name;
@@ -27,7 +36,7 @@ namespace Colloseum_Game
             };
 
             string[] maleAdjectives =
-{
+            {
                 "Большой",
                 "Могучий",
                 "Древний",
@@ -55,7 +64,7 @@ namespace Colloseum_Game
             };
 
             string[] maleNouns =
-{
+            {
                 "Зот",
                 "Миредзе",
                 "Возг",
@@ -77,6 +86,13 @@ namespace Colloseum_Game
                 name = femaleAdjectives[rnd.Next(0, femaleAdjectives.Length)] + ' ' + femaleNouns[rnd.Next(0, femaleNouns.Length)];
             }
             return name;
+        }
+
+        public int enemyAttack()
+        {
+            Random rnd = new Random();
+            int damage = rnd.Next(0, 6);
+            return damage;
         }
     }
 }

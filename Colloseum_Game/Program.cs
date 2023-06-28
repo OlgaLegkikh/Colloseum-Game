@@ -14,46 +14,65 @@ namespace Colloseum_Game
             bool gameIsOn = true;
             while (gameIsOn)
             { 
-            //Выбор персонажа
+            //Создание персонажа
+            
             Console.WriteLine($"Кого из своих подданых отправишь на арену, {userName}?");
             
             Console.WriteLine("1 - рыцарь пустоши, 2 - воин горизонта, 3 - северный охотник");
             int characterId = Convert.ToInt32(Console.ReadLine());
      
-
-            //Выбор оружия для персонажа
+                    var weapon = new Weapon();
+                    var knight = new Knight(weapon.damageS, weapon.damageF);
+            
             Console.WriteLine("Какое оружие дашь ему в руки?");
-                var weapon = new Weapon();
-                var knight = new Knight(weapon.damageS, weapon.damageF);
+
             //Описание каждого из видов оружия. Прочитать выбор игрока. Запомнить выбор
             int weaponId = Convert.ToInt32(Console.ReadLine());
-                
-            //Механика арены с обычным врагом
-                //Создание врага
-                    int enemyHealth = 5;
-                    int enemyDamage = 3;
-                //Бой
-                while ((knight.Health > 0) & (enemyHealth > 0))
+
+
+                Enemy enemy = new Enemy();
+                Console.WriteLine($"Ваш соперник {enemy.enemyName} со здоровьем {enemy.enemyHealth}! Да прибудет с вам сила");
+                while ((knight.Health > 0) && (enemy.enemyHealth > 0))
                 {
-                    knight.Health -=  enemyDamage;
-                    Console.WriteLine($"{knight.Health} {enemyHealth}");
-                    enemyHealth -= knight.Attack();
-                    Console.WriteLine($"{knight.Health} {enemyHealth}");
-                    knight.Heal();
-                    Console.WriteLine($"{knight.Health} {enemyHealth}");
-                    knight.IncreaseDamage();
-                    Console.WriteLine($"{knight.Health} {enemyHealth}");
-                    if (enemyHealth <= 0)
+                    Console.WriteLine("1 - атаковать, 2 - лечится, 3 - улучшить оружие");
+                    int userChoice = Convert.ToInt32(Console.ReadLine());
+                    switch (userChoice)
                     {
-                        //Дать подарочек
-                        //Завершить бой
+                        case 1:
+                            Console.WriteLine("Отличный выбор!");
+                            enemy.enemyHealth -= knight.Attack();
+                            break;
+                        case 2:
+                            Console.WriteLine("Как скажите!");
+                            knight.Heal();
+                            break;
+                        case 3:
+                            Console.WriteLine("И так тоже можно");
+                            knight.IncreaseDamage();
+                            break;
+                        default:
+                            Console.WriteLine("Так я еще не умею!");
+
+                            break;
                     }
+                    if (enemy.enemyHealth <= 0)
+                    {
+                        Console.WriteLine("Вы выиграли!");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("А теперь ход противника!");
+                        knight.Health -= enemy.enemyAttack();
+                    }
+                    Console.WriteLine($"Knight stats: {knight.Health}, {knight.Mana}");
+                    Console.WriteLine($"Enemy stats: {enemy.enemyHealth}");
+
+                //        //Дать подарочек
+                //        //Красиво Завершить бой
                 }
-                    //Выбор действия игрока (Атака, Лечение, Увеличение урона)
-                    //Атака врага
-                    //Повторять пока не закончится здоровье игрока или врага
-                    //Если враг повережен дать сундочек с подарком
-                    //Если игрок повержен предложить начать бой заново
+            }
+                  
                 //Повторить 3 боя
             //Механика арены с боссом - счетчик для увелечения урона сбрасывается
                 //Выбрать босса
@@ -65,7 +84,7 @@ namespace Colloseum_Game
                     //Повторять пока не закончится здоровье игрока или босса
                     //Если босс повережен поздравить и предложить сыграть еще раз
                     //Если игрок повержен предложить начать бой заново
-            }
+            
         }
     }
 }
