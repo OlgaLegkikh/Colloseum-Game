@@ -1,39 +1,35 @@
 ﻿using System;
 namespace Colloseum_Game
 {
-    public class Knight
+    public class Knight : Hero
     {
-        public int Health = 10;
-        public int Mana = 10;
-        private int _damageS;
-        private int _damageF;
-        public Knight(int damageS, int damageF)
-        {
-            _damageS = damageS;
-            _damageF = damageF;
-        }
-
         
-        public int Attack()
+        public Knight()
         {
-            var rnd = new Random();
-            int damage = rnd.Next(_damageS, _damageF + 1);
-            return damage;
-        }
+            Name = "Рыцарь пустоши";
+            Health = 10;
+            Mana = 10;
+            _damageS = 0;
+            _damageF = 5;
 
-        public void Heal()
+    }
+
+
+        public override void Heal()
         {
             var rnd = new Random();
-            Health += rnd.Next(1, 3);
+            int i = rnd.Next(1, 3);
+            Health += i;
             Mana--;
+            string[] spellName =
+            {
+                "Живая вода",
+                "Мертвая вода"
+            };
+            Console.WriteLine($"{Name} применил заклинание {spellName[i]}. Здоровье теперь {Health}");
+            Console.WriteLine($"Мана теперь {Mana}");
         }
 
-        public void IncreaseDamage()
-        {
-            _damageF++;
-            Mana -= 2;
-            
-        }
 
     }
 }

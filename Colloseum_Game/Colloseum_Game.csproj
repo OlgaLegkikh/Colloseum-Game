@@ -33,9 +33,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Knight.cs" />
-    <Compile Include="Weapon.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Balabol.cs" />
+    <Compile Include="Hero.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

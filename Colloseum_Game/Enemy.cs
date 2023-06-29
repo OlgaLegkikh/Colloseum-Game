@@ -92,6 +92,30 @@ namespace Colloseum_Game
         {
             Random rnd = new Random();
             int damage = rnd.Next(0, 6);
+            if (damage == 0)
+            {
+                string[] comments =
+                {
+                    "Так сложились звезды, что",
+                    "Кому-то нужно поучиться владеть мечом, ведь",
+                    "Это явно не его день, потому что",
+                    "Не стоило ему выходить на арену, ведь",
+                    "Моя маленькая сестренка управляется мечом лучше, чем"
+                };
+                Console.WriteLine($"{comments[rnd.Next(0, comments.Length)]} {this.enemyName} наносит {damage} урона!");
+            }
+            else
+            {
+                string[] comments =
+                {
+                    "Кто-то сегодня в ударе, ведь",
+                    "Как круто, что",
+                    "Кажется сегодна распродажа элексира везения, потому что",
+                    $"Не стоит переходить дорогу{this.enemyName}, ведь",
+                    "Не забудьте рассказать про этот бой внукам, ведь"
+                };
+                Console.WriteLine($"{comments[rnd.Next(0, comments.Length)]} {this.enemyName} наносит {damage} урона!");
+            }
             return damage;
         }
     }
