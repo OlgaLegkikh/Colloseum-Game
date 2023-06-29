@@ -55,7 +55,7 @@ namespace Colloseum_Game
         }
         //Едкое замечание когда известен соперник
         //Комментарий об успешности атаки рыцарем
-        public string knightAttackComment(int damage)
+        public string AttackComment(int damage)
         {
             var rnd = new Random();
             if (damage == 0)

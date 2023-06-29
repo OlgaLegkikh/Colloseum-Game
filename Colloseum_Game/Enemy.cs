@@ -12,12 +12,12 @@ namespace Colloseum_Game
         public Enemy()
         {
             Random rnd = new Random();
-            enemyName = nameGenerator();
+            enemyName = NameGenerator();
             enemyHealth = rnd.Next(5, 11);
 
         }
 
-        public static string nameGenerator()
+        public static string NameGenerator()
         {
             var rnd = new Random();
             string name;
@@ -88,7 +88,7 @@ namespace Colloseum_Game
             return name;
         }
 
-        public int enemyAttack()
+        public int EnemyAttack()
         {
             Random rnd = new Random();
             int damage = rnd.Next(0, 6);

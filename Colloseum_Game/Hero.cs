@@ -12,26 +12,33 @@ namespace Colloseum_Game
         {
         }
 
+        public abstract void Heal();
+
+
         public int Attack()
         {
             var rnd = new Random();
             var balabol = new Balabol();
             int damage = rnd.Next(_damageS, _damageF + 1);
-            Console.WriteLine($"{Name} наносит {damage} урона.{Environment.NewLine}{balabol.knightAttackComment(damage)}");
+            Console.WriteLine($"{Name} наносит {damage} урона.{Environment.NewLine}{balabol.AttackComment(damage)}");
             return damage;
         }
 
-        public abstract void Heal();
-        public void IncreaseDamage()
+        
+        public virtual void IncreaseDamage()
         {
-             _damageF++;
-             Mana -= 2;
-             Console.WriteLine($"Урон увеличен! мана теперь {Mana}.");
-
+            if (Mana >= 2)
+            {
+                _damageF++;
+                Mana -= 2;
+                Console.WriteLine($"Урон увеличен! мана теперь {Mana}.");
+            }
+            else
+            {
+                Console.WriteLine($"Увы вам не хватило маны. Урон остался таким же");
+            }
 
         }
-
-        public virtual
         
 
     }
