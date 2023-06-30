@@ -11,8 +11,10 @@ namespace Colloseum_Game
             Mana = 5; //так как рыцарь не умеет колдовать он использует элексиры в качестве маны. Всего у него их 5
             _damageS = 0;
             _damageF = 4;
-            Console.WriteLine($@"{Name} здоров аж на {Health} пунктов, Вооружен легким мечом. 
-                Разбирается в эликсирах. Сегодня у него их с собой {Mana}");
+            Console.WriteLine($@"
+                {Name} здоров аж на {Health} пунктов.
+                Вооружен легким мечом. 
+                Разбирается в эликсирах. Сегодня у него их с собой {Mana}.");
 
     }
 
@@ -30,12 +32,12 @@ namespace Colloseum_Game
                 "Живая вода",
                 "Мертвая вода"
                 };
-                Console.WriteLine($"{Name} выпил эликсир {elixirName[i-1]}. Здоровье теперь {Health}");
-                Console.WriteLine($"Элексиров осталось {Mana}");
+                Console.WriteLine($"{Name} выпил эликсир {elixirName[i-1]}. Здоровье теперь - {Health}.");
+                Console.WriteLine($"Элексиров осталось {Mana}.");
             }
             else
             {
-                Console.WriteLine($"{Name} израсходовал все элексиры! Здоровье осталось прежним {Health}");
+                Console.WriteLine($"{Name} израсходовал все элексиры! Здоровье осталось прежним - {Health}.");
             };
 
         }

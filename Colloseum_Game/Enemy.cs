@@ -13,7 +13,7 @@ namespace Colloseum_Game
         {
             Random rnd = new Random();
             enemyName = NameGenerator();
-            enemyHealth = rnd.Next(5, 11);
+            enemyHealth = rnd.Next(5, 20);
 
         }
 
@@ -57,7 +57,7 @@ namespace Colloseum_Game
                 "Сюся",
                 "Малинка",
                 "Грнока",
-                "Ппптка",
+                "Пупытка",
                 "Брета",
                 "Цвуха",
                 "Длода"
@@ -66,14 +66,14 @@ namespace Colloseum_Game
             string[] maleNouns =
             {
                 "Зот",
-                "Миредзе",
-                "Возг",
-                "Зорг",
-                "Суперстар",
-                "ДАННЫЕ УДАЛЕНЫ",
+                "Вжмых",
+                "Возгр",
+                "Жнец",
+                "Блоб",
+                "ДАННЫЕ_УДАЛЕНЫ",
                 "Чмоня",
                 "Кит-Кит",
-                "Скоттттттт",
+                "Скот",
                 "Олег"
             };
 
@@ -96,11 +96,12 @@ namespace Colloseum_Game
             {
                 string[] comments =
                 {
+                    "Ха-ха, смотрите",
                     "Так сложились звезды, что",
                     "Кому-то нужно поучиться владеть мечом, ведь",
                     "Это явно не его день, потому что",
                     "Не стоило ему выходить на арену, ведь",
-                    "Моя маленькая сестренка управляется мечом лучше, чем"
+                    $"Моя маленькая сестренка управляется мечом лучше, чем {this.enemyName}. Ведь"
                 };
                 Console.WriteLine($"{comments[rnd.Next(0, comments.Length)]} {this.enemyName} наносит {damage} урона!");
             }

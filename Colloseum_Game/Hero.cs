@@ -31,11 +31,11 @@ namespace Colloseum_Game
             {
                 _damageF++;
                 Mana -= 2;
-                Console.WriteLine($"Урон увеличен! мана теперь {Mana}.");
+                Console.WriteLine($"Урон увеличен! Мана теперь {Mana}.");
             }
             else
             {
-                Console.WriteLine($"Увы вам не хватило маны. Урон остался таким же");
+                Console.WriteLine($"Увы вам не хватило маны. Урон остался таким же.");
             }
 
         }

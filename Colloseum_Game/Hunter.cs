@@ -10,8 +10,10 @@ namespace Colloseum_Game
             Mana = 7;
             _damageS = 1;
             _damageF = 6;
-            Console.WriteLine($@"{Name}: здоровье {Health} пунктов, Владеет кинжалом и никогда не промахивается. 
-                Учился колдовать у друидов. Уровент маны - {Mana}");
+            Console.WriteLine($@"
+                {Name}: здоровье {Health} пунктов,
+                Владеет кинжалом и никогда не промахивается. 
+                Учился колдовать у друидов. Уровент маны - {Mana}.");
         }
 
         public override void Heal()
@@ -28,12 +30,12 @@ namespace Colloseum_Game
                 "Мурчание пумы",
                 "Водопой"
                 };
-                Console.WriteLine($"{Name} применил заклинание {spellName[i-1]}. Здоровье теперь {Health}");
-                Console.WriteLine($"Мана теперь {Mana}");
+                Console.WriteLine($"{Name} применил заклинание {spellName[i-1]}. Здоровье теперь {Health}.");
+                Console.WriteLine($"Мана теперь {Mana}.");
             }
             else
             {
-                Console.WriteLine($"{Name} израсходовал всю ману. Здоровье осталось прежним {Health}");
+                Console.WriteLine($"{Name} израсходовал всю ману. Здоровье осталось прежним {Health}.");
             }
         }
     }

@@ -7,11 +7,13 @@ namespace Colloseum_Game
         {
             Name = "Воин горизонта";
             Health = 13;
-            Mana = 7;
+            Mana = 6;
             _damageS = 0;
             _damageF = 6;
-            Console.WriteLine($@"Здоровье {Name} целых {Health} пунктов, легкому мечу предпочитает топор. 
-                Выучил несколько заклинаний у старого шамана. Уровент маны - {Mana}");
+            Console.WriteLine($@"
+                {Name} запасся здоровьем на целых {Health} пунктов.
+                Легкому мечу предпочитает огромный топор. 
+                Выучил несколько заклинаний у старого шамана. Уровень маны - {Mana}.");
         }
 
         public override void Heal()
@@ -27,12 +29,12 @@ namespace Colloseum_Game
                 "Вопль павшего",
                 "Ледяное сердце"
                 };
-                Console.WriteLine($"{Name} применил заклинание {spellName[i-1]}. Здоровье теперь {Health}");
+                Console.WriteLine($"{Name} применил заклинание {spellName[i-1]}. Здоровье теперь {Health}.");
                 Console.WriteLine($"Мана теперь {Mana}");
             }
             else
             {
-                Console.WriteLine($"{Name} израсходовал всю ману. Здоровье осталось прежним {Health}");
+                Console.WriteLine($"{Name} израсходовал всю ману. Здоровье осталось прежним {Health}.");
             }
         }
     }
