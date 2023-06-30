@@ -19,7 +19,7 @@ namespace Colloseum_Game
                 var hero = HeroChoice();
 
                 Enemy enemy = new Enemy();
-                Console.WriteLine($"Ваш соперник {enemy.enemyName} со здоровьем {enemy.enemyHealth}! Да прибудет начнется бой!");
+                Console.WriteLine($"Ваш соперник {enemy.enemyName} со здоровьем {enemy.enemyHealth}! Да начнется бой!");
                 
                 while ((hero.Health > 0) && (enemy.enemyHealth > 0))
                 {
@@ -60,15 +60,17 @@ namespace Colloseum_Game
                         gameIsOn = GameSwitch("Вы выиграли бой! Хотите повторить?");
 
                     }
-                    else if (hero.Health <= 0)
+                    else 
                     {
-                        gameIsOn = GameSwitch("Вы проиграли бой! Возьмете реванш?");
-                    }
-                    else
-                    {
+                        Console.WriteLine(Environment.NewLine);
                         Console.WriteLine("А теперь ход противника!");
                         hero.Health -= enemy.EnemyAttack();
+                        if (hero.Health <= 0)
+                        {
+                            gameIsOn = GameSwitch("Вы проиграли бой! Возьмете реванш?");
+                        }
                     }
+
                     Console.WriteLine(Environment.NewLine);
 
                 }
@@ -123,7 +125,7 @@ namespace Colloseum_Game
                 }
                 else
                 {
-                    return GameSwitch($"Я не знаю такую команду.\n {switchPhrase}");
+                    return GameSwitch($"Я не знаю такую команду.\n{switchPhrase}");
                 }
             }
             

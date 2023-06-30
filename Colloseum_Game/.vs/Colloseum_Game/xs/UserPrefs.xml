@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{A9B71B18-55B3-462A-AEE9-2CE9C443B2C9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hero.cs">
     <Files>
-      <File FileName="Program.cs" Line="29" Column="1" />
-      <File FileName="Hero.cs" />
+      <File FileName="Program.cs" Line="65" Column="64" />
+      <File FileName="Hero.cs" Line="38" Column="84" />
       <File FileName="Knight.cs" />
       <File FileName="Warrior.cs" />
       <File FileName="Hunter.cs" />
@@ -14,7 +14,7 @@
         <State name="__root__">
           <Node name="Colloseum_Game" expanded="True">
             <Node name="Colloseum_Game" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="Hero.cs" selected="True" />
             </Node>
           </Node>
         </State>

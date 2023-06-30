@@ -11,7 +11,7 @@ namespace Colloseum_Game
         
         public Enemy()
         {
-            Random rnd = new Random();
+            var rnd = new Random();
             enemyName = NameGenerator();
             enemyHealth = rnd.Next(5, 20);
 
@@ -90,7 +90,7 @@ namespace Colloseum_Game
 
         public int EnemyAttack()
         {
-            Random rnd = new Random();
+            var rnd = new Random();
             int damage = rnd.Next(0, 6);
             if (damage == 0)
             {
@@ -112,7 +112,7 @@ namespace Colloseum_Game
                     "Кто-то сегодня в ударе, ведь",
                     "Как круто, что",
                     "Кажется сегодна распродажа элексира везения, потому что",
-                    $"Не стоит переходить дорогу{this.enemyName}, ведь",
+                    $"Не стоит переходить дорогу {this.enemyName}, ведь",
                     "Не забудьте рассказать про этот бой внукам, ведь"
                 };
                 Console.WriteLine($"{comments[rnd.Next(0, comments.Length)]} {this.enemyName} наносит {damage} урона!");
