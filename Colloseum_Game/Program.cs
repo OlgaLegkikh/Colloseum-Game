@@ -7,7 +7,6 @@ namespace Colloseum_Game
         public static void Main(string[] args)
         {
             Balabol balabol = new Balabol();
-            //Приветствие
             Console.WriteLine($"Приветствую в Колизее глупцов! Как зовут тебя, {balabol.appealToUser()}?");
             string userName = Console.ReadLine();
 
@@ -23,9 +22,9 @@ namespace Colloseum_Game
                 
                 while ((hero.Health > 0) && (enemy.enemyHealth > 0))
                 {
-                    Console.WriteLine($"{hero.Name}: {hero.Health}, {hero.Mana}       {enemy.enemyName}: {enemy.enemyHealth}");
+                    Console.WriteLine($"{hero.Name}: {hero.Health}, {hero.Mana}   |    {enemy.enemyName}: {enemy.enemyHealth}");
                     var rnd = new Random();
-                    Console.WriteLine("1 - атаковать, 2 - лечится, 3 - улучшить оружие, 0 - выйти");
+                    Console.WriteLine("Ваш ход: 1 - атаковать, 2 - лечится, 3 - улучшить оружие, 0 - выйти из игры");
                     string userChoice = Console.ReadLine();
                     
                     if (userChoice == "0")

@@ -9,10 +9,10 @@ namespace Colloseum_Game
             Health = 9;
             Mana = 7;
             _damageS = 1;
-            _damageF = 6;
+            _damageF = 5;
             Console.WriteLine($@"
                 {Name}: здоровье {Health} пунктов,
-                Владеет кинжалом и никогда не промахивается. 
+                Владеет кинжалом с максимальным уроном {_damageF} и никогда не промахивается. 
                 Учился колдовать у друидов. Уровент маны - {Mana}.");
         }
 
