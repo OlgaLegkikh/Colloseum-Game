@@ -55,7 +55,7 @@ namespace Colloseum_Game
                 "Живая вода",
                 "Мертвая вода"
                 };
-                Console.WriteLine($"{Name} разбил элексир {elixirName[i]} о свой меч! Урон увеличен! Мана теперь {Mana}.");
+                Console.WriteLine($"{Name} разбил элексир {elixirName[i-1]} о свой меч! Урон увеличен! Мана теперь {Mana}.");
             }
             else
             {
