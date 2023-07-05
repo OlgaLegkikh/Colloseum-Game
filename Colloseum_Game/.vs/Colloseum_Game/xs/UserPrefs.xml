@@ -1,7 +1,10 @@
 ﻿<Properties StartupConfiguration="{A9B71B18-55B3-462A-AEE9-2CE9C443B2C9}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="9" Column="45" />
+      <File FileName="Program.cs" Line="28" Column="27" />
+      <File FileName="Knight.cs" />
+      <File FileName="Hunter.cs" />
+      <File FileName="Warrior.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Colloseum__Game PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|anycpu" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
